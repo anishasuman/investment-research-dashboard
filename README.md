@@ -3,37 +3,97 @@ Your financial advisor called in sick... so AI showed up instead.... https://equ
 <img width="959" height="530" alt="image" src="https://github.com/user-attachments/assets/0ba0db11-b594-45ac-a331-51436a9bd414" />
 
 
-## Getting Started
+# 📈 AI Investment Research Agent
 
-First, run the development server:
+An AI-powered investment research application built with **Next.js**, **LangChain**, and **Google Gemini**. It analyzes a company's financial data and latest news to generate an AI-based investment recommendation.
+
+## ✨ Features
+
+- Search any public company
+- Live financial data
+- Latest market news
+- AI-powered Buy / Hold / Sell recommendation
+- Risk analysis & confidence score
+- Target price and expected return
+
+## 🛠 Tech Stack
+
+- Next.js
+- React
+- LangChain
+- Google Gemini
+- Yahoo Finance API
+- GNews API
+- Zod
+
+## 📂 Project Structure
+
+```
+app/
+components/
+lib/
+types/
+public/
+```
+
+## ⚙️ Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/anishasuman/investment-research-dashboard.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env.local` file
+
+```env
+GOOGLE_API_KEY=your_google_api_key
+GNEWS_API_KEY=your_gnews_api_key
+```
+
+Run the application
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔄 Workflow
 
-## Learn More
+```
+User
+   ↓
+Company Name
+   ↓
+Yahoo Finance + GNews
+   ↓
+LangChain + Gemini
+   ↓
+Investment Recommendation
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Future Improvements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- PDF Export
+- Search History
+- Company Comparison
+- Historical Stock Charts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👩‍💻 Author
 
-## Deploy on Vercel
+**Anisha Kumari**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+B.Tech Computer Science Engineering
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
