@@ -1,0 +1,57 @@
+.main {
+  --cursor-x: 50%;
+  --cursor-y: 30%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 72px 20px 110px;
+  background: #050b18;
+  isolation: isolate;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(55, 117, 237, .25), transparent 32rem),
+    radial-gradient(circle at 90% 30%, rgba(49, 208, 181, .16), transparent 28rem),
+    linear-gradient(145deg, #050b18 0%, #09182c 49%, #071121 100%);
+}
+
+.cursorGlow {
+  position: absolute;
+  z-index: -1;
+  left: var(--cursor-x);
+  top: var(--cursor-y);
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 141, 255, .16), rgba(33, 167, 206, .06) 32%, transparent 68%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .18s ease, height .18s ease, opacity .25s ease;
+}
+
+.pressed .cursorGlow { width: 280px; height: 280px; opacity: .9; }
+
+.bubbles { position: absolute; z-index: -2; inset: 0; overflow: hidden; pointer-events: none; }
+.bubbles i { position: absolute; display: block; width: var(--size); height: var(--size); border: 1px solid rgba(150, 204, 255, .18); border-radius: 50%; background: radial-gradient(circle at 35% 28%, rgba(182, 224, 255, .2), rgba(57, 114, 190, .04) 52%, transparent 72%); box-shadow: inset 5px 5px 12px rgba(184, 225, 255, .08), 0 0 24px rgba(67, 147, 255, .06); animation: drift var(--duration) ease-in-out infinite alternate; }
+.bubbles i:nth-child(1) { --size: 78px; --duration: 11s; left: 5%; top: 16%; }
+.bubbles i:nth-child(2) { --size: 28px; --duration: 8s; left: 16%; top: 74%; }
+.bubbles i:nth-child(3) { --size: 120px; --duration: 15s; left: 80%; top: 8%; }
+.bubbles i:nth-child(4) { --size: 45px; --duration: 9s; left: 91%; top: 65%; }
+.bubbles i:nth-child(5) { --size: 58px; --duration: 12s; left: 70%; top: 80%; }
+.bubbles i:nth-child(6) { --size: 21px; --duration: 7s; left: 29%; top: 31%; }
+.bubbles i:nth-child(7) { --size: 90px; --duration: 14s; left: -3%; top: 72%; }
+.bubbles i:nth-child(8) { --size: 36px; --duration: 10s; left: 60%; top: 25%; }
+
+.hero { position: relative; z-index: 1; width: 100%; max-width: 1120px; margin: 0 auto; }
+.hero::before { display: block; width: max-content; max-width: 100%; margin: 0 auto 19px; padding: 7px 12px; border: 1px solid rgba(111, 165, 255, .34); border-radius: 999px; background: rgba(18, 45, 80, .56); color: #a9cbff; content: "INTELLIGENCE · SIMPLIFIED"; font-size: .68rem; font-weight: 700; letter-spacing: .14em; }
+.hero h1 { max-width: 790px; margin: 0 auto 15px; color: #f8fbff; font-size: clamp(2.45rem, 6vw, 4.35rem); letter-spacing: -.065em; line-height: .99; text-align: center; text-wrap: balance; text-shadow: 0 4px 30px rgba(68, 133, 255, .18); }
+.hero h1::first-letter { color: #a9c7ff; }
+.hero p { max-width: 650px; margin: 0 auto 40px; color: #a5b9d0; font-size: 1.05rem; line-height: 1.65; text-align: center; }
+
+@keyframes drift { from { transform: translate3d(0, 0, 0) rotate(0deg); } to { transform: translate3d(22px, -35px, 0) rotate(25deg); } }
+@media (max-width: 640px) { .main { padding: 50px 16px 72px; } .hero p { margin-bottom: 29px; } .cursorGlow { display: none; } }
+@media (prefers-reduced-motion: reduce) { .bubbles i { animation: none; } .cursorGlow, .cardShine { transition: none; } }

@@ -1,0 +1,2 @@
+.button { padding: 13px 22px; border: 0; border-radius: 10px; background: #3975ed; color: #fff; font-size: 1rem; font-weight: 700; transition: filter .2s ease; }
+.button:hover { filter: brightness(1.12); }

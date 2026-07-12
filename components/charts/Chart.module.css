@@ -1,0 +1,5 @@
+.chart { margin: 20px 0; padding: 20px; border: 1px solid #263d56; border-radius: 14px; background: #102035; color: #d9e5f2; }
+.chart h3 { margin-bottom: 14px; color: #f2f7fc; font-size: 1rem; }
+.progress, .bar { width: 100%; height: 12px; overflow: hidden; border-radius: 999px; background: #0a1727; }
+.fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, #3975ed, #27b99b); transition: width .5s ease; }
+.value { margin-top: 10px; color: #9fb3ca; font-size: .92rem; font-weight: 700; text-align: right; }

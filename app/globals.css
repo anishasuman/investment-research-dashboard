@@ -1,0 +1,39 @@
+:root {
+  --page: #07111f;
+  --surface: #0d1b2a;
+  --surface-raised: #12243a;
+  --surface-muted: #162a42;
+  --border: #243b55;
+  --text: #f1f5f9;
+  --text-muted: #9fb0c4;
+  --accent: #4f8cff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { background: var(--page); }
+
+body {
+  min-width: 320px;
+  background: var(--page);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button { cursor: pointer; }
+input { outline: none; }
+
+.cardShine {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(159, 201, 255, .16), transparent 32%);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
