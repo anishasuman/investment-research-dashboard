@@ -1,4 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Your financial advisor called in sick... so AI showed up instead.... https://equity-eye-anisha.vercel.app/
+<img width="959" height="530" alt="image" src="https://github.com/user-attachments/assets/0ba0db11-b594-45ac-a331-51436a9bd414" />
+
 
 ## Getting Started
 
